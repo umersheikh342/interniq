@@ -16,7 +16,7 @@ export const dynamic = "force-dynamic";
 function AppContent({ children }: { children: React.ReactNode }) {
   return (
     <main className="flex-1 min-w-0 lg:pl-64 overflow-y-auto overflow-x-hidden">
-      <div className="mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-8 xl:px-10 py-6 lg:py-8">
+      <div className="mx-auto w-full h-full max-w-[1400px] px-4 sm:px-6 lg:px-8 xl:px-10 py-6 lg:py-8">
         {children}
       </div>
     </main>
@@ -48,7 +48,7 @@ export default async function ApplicantLayout({
   }
 
   return (
-    <div className="min-h-screen bg-background dark:bg-slate-950 flex flex-col lg:flex-row antialiased">
+    <div className="min-h-screen lg:h-screen bg-background dark:bg-slate-950 flex flex-col lg:flex-row antialiased">
       <ApplicantSidebar userEmail={headerUser.email} userName={undefined} />
       <AppContent>{children}</AppContent>
     </div>

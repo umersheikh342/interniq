@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\app\\api",
+    "\\app\\api\\ai",
+    "\\app\\api\\ai\\description-suggestion"
+  ],
+  "SelectedNode": "\\app\\api\\ai\\description-suggestion\\route.ts",
+  "PreviewInSolutionExplorer": false
+}

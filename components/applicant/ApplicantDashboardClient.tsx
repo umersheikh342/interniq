@@ -143,7 +143,7 @@ export default function ApplicantDashboardClient({
   ).length;
 
   return (
-    <div className="space-y-6">
+    <div className="h-full flex flex-col gap-6">
       {/* ── HERO (compact) ── */}
       <section className="relative overflow-hidden rounded-3xl border border-teal/15 bg-gradient-to-br from-teal-light/60 via-white to-emerald-light/40 dark:from-slate-800 dark:via-slate-900 dark:to-slate-800 p-5 sm:p-7 shadow-card">
         <div className="absolute -top-16 -right-16 h-40 w-40 rounded-full bg-teal/10 blur-3xl" />
@@ -194,10 +194,10 @@ export default function ApplicantDashboardClient({
       {insights && <AiInsightsCard data={insights} />}
 
       {/* ── MAIN CONTENT: 2-column on desktop ── */}
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-6 items-start">
+      <div className="flex-1 min-h-0 grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-6 items-start">
 
-        {/* LEFT COLUMN — primary content */}
-        <div className="space-y-6 min-w-0">
+        {/* LEFT COLUMN — primary content (scrollable on desktop, normal flow on mobile) */}
+        <div className="space-y-6 min-w-0 lg:min-h-0 lg:overflow-y-auto lg:pr-1">
           {/* Recommendations */}
           {topRecommended && (
             <HomepageRecommendations
@@ -277,8 +277,8 @@ export default function ApplicantDashboardClient({
           <ApplicantInterviews interviews={interviews || []} />
         </div>
 
-        {/* RIGHT COLUMN — sidebar */}
-        <div className="space-y-5 min-w-0">
+        {/* RIGHT COLUMN — sidebar (anchored, natural height) */}
+        <div className="space-y-5 min-w-0 lg:sticky lg:top-0 lg:self-start">
           <NotificationsPanel />
           <ProfileCompletion profile={profile} skills={skills || []} projects={projects || []} experience={experience || []} />
           <ResumeHealth profile={profile} skills={skills || []} projects={projects || []} experience={experience || []} />
