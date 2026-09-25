@@ -143,17 +143,15 @@ export default function ApplicantDashboardClient({
   ).length;
 
   return (
-    <div className="h-full flex flex-col gap-6">
+    <div className="h-full flex flex-col gap-4">
       {/* ── HERO (compact) ── */}
-      <section className="relative overflow-hidden rounded-3xl border border-teal/15 bg-gradient-to-br from-teal-light/60 via-white to-emerald-light/40 dark:from-slate-800 dark:via-slate-900 dark:to-slate-800 p-5 sm:p-7 shadow-card">
-        <div className="absolute -top-16 -right-16 h-40 w-40 rounded-full bg-teal/10 blur-3xl" />
-        <div className="absolute -bottom-16 -left-8 h-40 w-40 rounded-full bg-emerald/10 blur-3xl" />
-        <div className="relative flex flex-col lg:flex-row lg:items-center gap-6">
+      <section className="rounded-2xl border border-border bg-white p-5 dark:border-slate-700 dark:bg-slate-900 sm:p-6">
+        <div className="flex flex-col lg:flex-row lg:items-center gap-5">
           <div className="flex-1 min-w-0">
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-white/70 dark:bg-slate-800/80 border border-teal/20 px-2.5 py-0.5 text-[10px] font-mono font-bold uppercase tracking-wider text-teal-dark dark:text-teal">
+            <span className="inline-flex items-center gap-1.5 rounded-md border border-blue-200 bg-blue-50 px-2 py-1 text-[10px] font-semibold uppercase tracking-wide text-blue-700 dark:border-blue-900 dark:bg-blue-950/40 dark:text-blue-300">
               <Sparkles className="h-3 w-3" /> AI Career Advisor
             </span>
-            <h1 className="mt-3 text-2xl sm:text-3xl font-display font-extrabold text-primary dark:text-white tracking-tight leading-tight">
+            <h1 className="mt-3 text-2xl sm:text-3xl font-display font-bold text-primary dark:text-white tracking-tight leading-tight">
               Welcome back, <span className="text-gradient">{profile?.full_name?.split(" ")[0] || "Applicant"}</span>.
             </h1>
             <p className="mt-1.5 text-sm text-text-secondary dark:text-slate-400">
@@ -161,7 +159,7 @@ export default function ApplicantDashboardClient({
             </p>
 
             {/* Compact inline metrics */}
-            <div className="mt-4 flex flex-wrap gap-2.5">
+            <div className="mt-4 flex flex-wrap gap-2">
               <HeroMetric value={recommendedCount} label="Recommended" tone="teal" />
               <HeroMetric value={highAcceptanceCount} label="High Match" tone="mint" />
               <HeroMetric value={underReview || stats.underReview} label="Under Review" tone="amber" />
@@ -177,8 +175,8 @@ export default function ApplicantDashboardClient({
             </div>
           </div>
           <div className="shrink-0 mx-auto lg:mx-0">
-            <div className="flex flex-col items-center rounded-3xl bg-white/80 dark:bg-slate-800/80 border border-border dark:border-slate-700 shadow-card px-6 py-5 backdrop-blur">
-              <CircularGauge score={profileComplete} size={100} strokeWidth={8} label="Profile" />
+            <div className="flex flex-col items-center rounded-xl border border-border bg-slate-50 px-4 py-3 dark:border-slate-700 dark:bg-slate-800">
+              <CircularGauge score={profileComplete} size={84} strokeWidth={7} label="Profile" />
               <Link href="/applicant/profile" className="mt-3 inline-flex items-center gap-1 text-[11px] font-semibold text-teal-dark dark:text-teal hover:underline">
                 Complete it <ArrowRight className="h-3 w-3" />
               </Link>

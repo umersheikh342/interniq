@@ -54,7 +54,7 @@ export default function ApplicantSidebar({
   return (
     <>
       {/* Mobile Top Header */}
-      <header className="lg:hidden sticky top-0 z-40 flex items-center justify-between border-b border-border dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 px-4 py-3 backdrop-blur shadow-subtle">
+      <header className="lg:hidden sticky top-0 z-40 flex items-center justify-between border-b border-border dark:border-slate-800 bg-white px-4 py-3 shadow-subtle dark:bg-slate-950">
         <Link href="/applicant" className="flex items-center gap-2">
           <div className="flex items-center gap-2">
             <div className="relative flex items-center justify-center h-8 w-8 rounded-xl bg-teal shadow-subtle">
@@ -103,15 +103,15 @@ export default function ApplicantSidebar({
       {/* Desktop Sidebar & Mobile Sliding Drawer */}
       <aside
         className={cn(
-          "fixed top-0 bottom-0 left-0 z-50 flex flex-col bg-sidebar dark:bg-slate-950 text-white transition-all duration-200 border-r border-white/10",
+          "fixed top-0 bottom-0 left-0 z-50 flex flex-col border-r border-border bg-white text-primary transition-all duration-200 dark:border-slate-800 dark:bg-slate-950 dark:text-white",
           // Mobile state
           mobileOpen ? "translate-x-0 w-72" : "-translate-x-full lg:translate-x-0",
           // Desktop collapsed state
-          collapsed ? "lg:w-16" : "lg:w-56"
+          "lg:w-56"
         )}
       >
         {/* Brand Header */}
-        <div className="flex items-center justify-between px-4 py-4 border-b border-white/10 dark:border-slate-800">
+        <div className="flex items-center justify-between border-b border-border px-4 py-4 dark:border-slate-800">
           <Link href="/applicant" className="flex items-center gap-3 overflow-hidden">
             <div className="relative flex items-center justify-center h-9 w-9 rounded-xl bg-teal shadow-subtle shrink-0">
               <svg viewBox="0 0 24 24" className="h-5 w-5 text-white" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -127,7 +127,7 @@ export default function ApplicantSidebar({
             </div>
             {!collapsed && (
               <div className="flex flex-col">
-                <span className="font-display text-xl font-extrabold tracking-tight text-white">
+                <span className="font-display text-xl font-extrabold tracking-tight text-primary dark:text-white">
                   Intern<span className="text-gradient">IQ</span>
                 </span>
                 <span className="font-mono text-[9px] uppercase tracking-wider text-teal">
@@ -140,7 +140,7 @@ export default function ApplicantSidebar({
           {/* Desktop Toggle Button */}
           <button
             onClick={() => setCollapsed(!collapsed)}
-            className="hidden lg:flex h-6 w-6 items-center justify-center rounded-full bg-white/10 text-white/70 hover:bg-white/20 hover:text-white transition-colors"
+            className="hidden lg:flex h-7 w-7 items-center justify-center rounded-lg border border-border text-text-secondary hover:bg-slate-50 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-800 transition-colors"
             title="Toggle Sidebar"
           >
             <ChevronRight
@@ -164,8 +164,8 @@ export default function ApplicantSidebar({
                 className={cn(
                   "flex items-center gap-3 rounded-lg px-3 py-2 text-[13px] font-medium transition-colors group relative",
                   isActive
-                    ? "bg-gradient-primary text-white shadow-teal font-semibold"
-                    : "text-slate-400 hover:bg-white/10 hover:text-white"
+                    ? "bg-teal-light text-teal-dark font-semibold dark:bg-blue-500/15 dark:text-blue-300"
+                    : "text-slate-600 hover:bg-slate-100 hover:text-primary dark:text-slate-400 dark:hover:bg-white/10 dark:hover:text-white"
                 )}
               >
                 <Icon className="h-5 w-5 shrink-0" />
@@ -175,7 +175,7 @@ export default function ApplicantSidebar({
                   </>
                 )}
                 {isActive && !collapsed && (
-                  <span className="ml-auto h-2 w-2 rounded-full bg-white shadow-sm" />
+                  <span className="ml-auto h-1.5 w-1.5 rounded-full bg-teal" />
                 )}
               </Link>
             );
@@ -183,10 +183,10 @@ export default function ApplicantSidebar({
         </nav>
 
         {/* Applicant Profile / Bottom Panel */}
-        <div className="border-t border-white/10 dark:border-slate-800 p-4 space-y-3">
+        <div className="border-t border-border p-3 space-y-3 dark:border-slate-800">
           {!collapsed && (
             <div className="flex items-center justify-between px-2 mb-2">
-              <span className="text-[10px] font-mono uppercase tracking-wider text-slate-500">
+                <span className="text-[10px] font-mono uppercase tracking-wider text-slate-500 dark:text-slate-400">
                 Display
               </span>
               <ThemeToggle />
@@ -199,7 +199,7 @@ export default function ApplicantSidebar({
                 {(userName || userEmail || "A")[0].toUpperCase()}
               </div>
               <div className="flex flex-col min-w-0">
-                <span className="text-xs font-semibold text-white truncate">
+                <span className="text-xs font-semibold text-primary dark:text-white truncate">
                   {userName || "Applicant Account"}
                 </span>
                 <span className="text-[11px] text-slate-400 truncate">

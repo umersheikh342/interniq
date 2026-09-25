@@ -48,7 +48,7 @@ export default async function ApplicantLayout({
   }
 
   return (
-    <div className="min-h-screen lg:h-screen bg-background dark:bg-slate-950 flex flex-col lg:flex-row antialiased">
+    <div className="app-shell min-h-screen lg:h-screen bg-background dark:bg-slate-950 flex flex-col lg:flex-row antialiased">
       <ApplicantSidebar userEmail={headerUser.email} userName={undefined} />
       <AppContent>{children}</AppContent>
     </div>

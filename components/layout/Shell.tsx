@@ -24,7 +24,7 @@ export default function Shell({
 
   if (inDashboard) {
     return (
-      <div className="min-h-screen bg-background dark:bg-slate-950 flex flex-col lg:flex-row antialiased">
+      <div className="app-shell min-h-screen bg-background dark:bg-slate-950 flex flex-col lg:flex-row antialiased">
         <CommandPaletteEnhanced />
         <KeyboardShortcuts />
         <Toaster 
@@ -38,7 +38,7 @@ export default function Shell({
 
         <main className="flex-1 lg:pl-56 min-w-0 transition-all duration-200 overflow-y-auto">
           {/* Desktop top-right bar — hidden on mobile (Sidebar handles mobile top bar) */}
-          <div className="hidden lg:flex sticky top-0 z-30 justify-end items-center px-6 py-3 bg-background/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-border dark:border-slate-800">
+          <div className="hidden lg:flex sticky top-0 z-30 justify-end items-center px-6 py-3 bg-white dark:bg-slate-950 border-b border-border dark:border-slate-800">
             <ThemeToggle />
           </div>
           <div className="mx-auto max-w-7xl px-4 sm:px-5 lg:px-6 py-5 space-y-5 page-enter">

@@ -375,6 +375,19 @@ textarea:focus-visible {
   color: #93C5FD;
 }
 
+/* Keep authenticated pages calm and flat; content cards rely on borders for grouping. */
+.app-shell .shadow-card,
+.app-shell .shadow-hover,
+.app-shell .shadow-subtle {
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.app-shell .shadow-teal,
+.app-shell .shadow-ai,
+.app-shell .shadow-emerald {
+  box-shadow: none;
+}
+
 /* Hide scrollbar for horizontal carousels (keep wheel/touch scrolling) */
 .hide-scrollbar {
   -ms-overflow-style: none;

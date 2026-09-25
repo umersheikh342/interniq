@@ -25,3 +25,8 @@
 - Replaced the former teal/mint accent with a clear blue palette and updated hard-coded SVG, chart, browser-theme, and logo colors that bypassed the shared tokens.
 - Committed and pushed the visual correction as c9eca12; the user may need to restart/redeploy the app and hard-refresh to see rebuilt theme assets.
 
+
+## 2026-09-25T20:58:58Z
+- Restyled authenticated applicant/recruiter shells with white navigation, slate borders, blue active states, flatter cards, and a cleaner applicant dashboard header. Kept dark mode and existing workflows.
+- Remaining: runtime visual check requires installed project dependencies; latest shell work still needs commit/push.
+
