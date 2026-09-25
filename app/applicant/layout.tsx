@@ -15,8 +15,8 @@ export const dynamic = "force-dynamic";
  */
 function AppContent({ children }: { children: React.ReactNode }) {
   return (
-    <main className="flex-1 min-w-0 lg:pl-64 overflow-y-auto overflow-x-hidden">
-      <div className="mx-auto w-full h-full max-w-[1400px] px-4 sm:px-6 lg:px-8 xl:px-10 py-6 lg:py-8">
+    <main className="flex-1 min-w-0 lg:pl-56 overflow-y-auto overflow-x-hidden">
+      <div className="mx-auto w-full h-full max-w-[1400px] px-4 sm:px-5 lg:px-6 py-5">
         {children}
       </div>
     </main>

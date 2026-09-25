@@ -15,6 +15,8 @@ import {
   Star,
   Search,
   UserCheck,
+  Sparkles,
+  CalendarClock,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -24,40 +26,58 @@ import ThemeToggle from "@/components/ui/ThemeToggle";
 const navItems = [
   {
     href: "/dashboard",
-    label: "Dashboard",
+    label: "Overview",
     icon: LayoutDashboard,
     exact: true,
     shortcut: "⌘D",
   },
   {
     href: "/dashboard/applications",
-    label: "Applications",
+    label: "Applicant ranking",
     icon: Users,
     shortcut: "⌘A",
   },
   {
     href: "/dashboard/applications/shortlisted",
-    label: "Shortlisted",
+    label: "Shortlisted applicants",
     icon: UserCheck,
     shortcut: "⌘S",
   },
   {
     href: "/dashboard/talent-pool",
-    label: "Talent Pool",
+    label: "Talent pool",
     icon: Star,
     shortcut: "⌘T",
   },
   {
     href: "/dashboard/search",
-    label: "Search",
+    label: "Candidate search",
     icon: Search,
     shortcut: "⌘/",
   },
   {
     href: "/dashboard/create-internship",
-    label: "Create Role",
+    label: "Job posting",
     icon: PlusCircle,
     shortcut: "⌘N",
+  },
+  {
+    href: "/dashboard/create-internship",
+    label: "Required skills",
+    icon: Sparkles,
+    shortcut: "",
+  },
+  {
+    href: "/dashboard/applications",
+    label: "Interview questions",
+    icon: Sparkles,
+    shortcut: "",
+  },
+  {
+    href: "/dashboard/applications",
+    label: "Interview scheduling",
+    icon: CalendarClock,
+    shortcut: "",
   },
 ];
 
@@ -124,15 +144,15 @@ export default function Sidebar({
       {/* Desktop Sidebar & Mobile Sliding Drawer */}
       <aside
         className={cn(
-          "fixed top-0 bottom-0 left-0 z-50 flex flex-col bg-sidebar dark:bg-slate-950 text-white transition-all duration-300 shadow-2xl",
+          "fixed top-0 bottom-0 left-0 z-50 flex flex-col bg-sidebar dark:bg-slate-950 text-white transition-all duration-200 border-r border-white/10",
           // Mobile state
           mobileOpen ? "translate-x-0 w-72" : "-translate-x-full lg:translate-x-0",
           // Desktop collapsed state
-          collapsed ? "lg:w-20" : "lg:w-64"
+          collapsed ? "lg:w-16" : "lg:w-56"
         )}
       >
         {/* Brand Header */}
-        <div className="flex items-center justify-between px-6 py-6 border-b border-white/10 dark:border-slate-800">
+        <div className="flex items-center justify-between px-4 py-4 border-b border-white/10 dark:border-slate-800">
           <Link href="/dashboard" className="flex items-center gap-3 overflow-hidden">
             <div className="relative flex items-center justify-center h-9 w-9 rounded-xl bg-gradient-to-br from-teal to-emerald shadow-teal/20 shadow-lg shrink-0">
               <svg viewBox="0 0 24 24" className="h-5 w-5 text-white" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -171,7 +191,7 @@ export default function Sidebar({
         </div>
 
         {/* Navigation Items */}
-        <nav className="flex-1 space-y-1 px-3 py-6 overflow-y-auto" aria-label="Main navigation">
+        <nav className="flex-1 space-y-0.5 px-2 py-3 overflow-y-auto" aria-label="Main navigation">
           {navItems.map((item) => {
             const isActive = item.exact
               ? pathname === item.href
@@ -185,7 +205,7 @@ export default function Sidebar({
                 href={item.href}
                 onClick={() => setMobileOpen(false)}
                 className={cn(
-                  "flex items-center gap-3.5 rounded-xl px-3.5 py-3 text-sm font-medium transition-all duration-150 group relative",
+                  "flex items-center gap-3 rounded-lg px-3 py-2 text-[13px] font-medium transition-colors group relative",
                   isActive
                     ? "bg-gradient-primary text-white shadow-teal font-semibold"
                     : "text-slate-400 hover:bg-white/10 hover:text-white"

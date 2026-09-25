@@ -14,6 +14,11 @@ import {
   Menu,
   X,
   ChevronRight,
+  Bell,
+  GraduationCap,
+  MessageSquareText,
+  Building2,
+  Code2,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -21,12 +26,17 @@ import LogoutButton from "@/components/auth/LogoutButton";
 import ThemeToggle from "@/components/ui/ThemeToggle";
 
 const navItems = [
-  { href: "/applicant", label: "Dashboard", icon: LayoutDashboard, exact: true },
-  { href: "/applicant/profile", label: "My Profile", icon: UserCircle },
-  { href: "/applicant/internships", label: "Find Internships", icon: Search },
-  { href: "/applicant/applications", label: "My Applications", icon: Briefcase },
-  { href: "/applicant/saved", label: "Saved Jobs", icon: Bookmark },
-  { href: "/applicant/resume", label: "Resume", icon: FileText },
+  { href: "/applicant", label: "Overview", icon: LayoutDashboard, exact: true },
+  { href: "/applicant/resume", label: "CV optimizer", icon: FileText },
+  { href: "/applicant/profile", label: "Profile & skills", icon: UserCircle },
+  { href: "/applicant/profile", label: "GitHub & LinkedIn", icon: Code2 },
+  { href: "/applicant/internships", label: "Job search", icon: Search },
+  { href: "/applicant/settings", label: "Job alerts", icon: Bell },
+  { href: "/applicant", label: "Interview questions", icon: MessageSquareText, exact: true },
+  { href: "/applicant/profile", label: "Course roadmap", icon: GraduationCap },
+  { href: "/applicant/saved", label: "Saved jobs", icon: Bookmark },
+  { href: "/applicant/applications", label: "Applications", icon: Briefcase },
+  { href: "/applicant/profile", label: "Desired companies", icon: Building2 },
   { href: "/applicant/settings", label: "Settings", icon: Settings },
 ];
 
@@ -93,15 +103,15 @@ export default function ApplicantSidebar({
       {/* Desktop Sidebar & Mobile Sliding Drawer */}
       <aside
         className={cn(
-          "fixed top-0 bottom-0 left-0 z-50 flex flex-col bg-sidebar dark:bg-slate-950 text-white transition-all duration-300 shadow-2xl",
+          "fixed top-0 bottom-0 left-0 z-50 flex flex-col bg-sidebar dark:bg-slate-950 text-white transition-all duration-200 border-r border-white/10",
           // Mobile state
           mobileOpen ? "translate-x-0 w-72" : "-translate-x-full lg:translate-x-0",
           // Desktop collapsed state
-          collapsed ? "lg:w-20" : "lg:w-64"
+          collapsed ? "lg:w-16" : "lg:w-56"
         )}
       >
         {/* Brand Header */}
-        <div className="flex items-center justify-between px-6 py-6 border-b border-white/10 dark:border-slate-800">
+        <div className="flex items-center justify-between px-4 py-4 border-b border-white/10 dark:border-slate-800">
           <Link href="/applicant" className="flex items-center gap-3 overflow-hidden">
             <div className="relative flex items-center justify-center h-9 w-9 rounded-xl bg-gradient-to-br from-teal to-emerald shadow-teal/20 shadow-lg shrink-0">
               <svg viewBox="0 0 24 24" className="h-5 w-5 text-white" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -140,7 +150,7 @@ export default function ApplicantSidebar({
         </div>
 
         {/* Navigation Items */}
-        <nav className="flex-1 space-y-1 px-3 py-6 overflow-y-auto" aria-label="Applicant navigation">
+        <nav className="flex-1 space-y-0.5 px-2 py-3 overflow-y-auto" aria-label="Applicant navigation">
           {navItems.map((item) => {
             const isActive = item.exact
               ? pathname === item.href
@@ -152,7 +162,7 @@ export default function ApplicantSidebar({
                 href={item.href}
                 onClick={() => setMobileOpen(false)}
                 className={cn(
-                  "flex items-center gap-3.5 rounded-xl px-3.5 py-3 text-sm font-medium transition-all duration-150 group relative",
+                  "flex items-center gap-3 rounded-lg px-3 py-2 text-[13px] font-medium transition-colors group relative",
                   isActive
                     ? "bg-gradient-primary text-white shadow-teal font-semibold"
                     : "text-slate-400 hover:bg-white/10 hover:text-white"
@@ -207,4 +217,3 @@ export default function ApplicantSidebar({
     </>
   );
 }
-
