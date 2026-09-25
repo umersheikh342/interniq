@@ -20,3 +20,8 @@
 - Applicant sidebar entries now lead to these real routes; GitHub/LinkedIn and CV optimization stay on their existing working screens. Recruiter generators, ranking, scheduling and posting were verified in existing workflow components.
 - Job alerts evaluate when the signed-in applicant opens the alerts screen; no scheduled background delivery service exists in this project.
 
+
+## 2026-09-25T20:53:27Z
+- Replaced the former teal/mint accent with a clear blue palette and updated hard-coded SVG, chart, browser-theme, and logo colors that bypassed the shared tokens.
+- Committed and pushed the visual correction as c9eca12; the user may need to restart/redeploy the app and hard-refresh to see rebuilt theme assets.
+
