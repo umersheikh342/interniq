@@ -357,23 +357,22 @@ textarea:focus-visible {
 
 /* Glassmorphism utility */
 .glass-panel {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(226, 232, 240, 0.8);
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(226, 232, 240, 0.9);
 }
 
 .dark .glass-panel {
-  background: rgba(8, 20, 38, 0.85);
+  background: rgba(15, 23, 42, 0.96);
   border-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Primary Gradient Text — brand emerald/teal/mint */
+/* Minimal brand text: use one muted teal accent instead of a gradient. */
 .text-gradient {
-  background: linear-gradient(120deg, #0E8A6D 0%, #17C6B5 50%, #29D391 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #0F766E;
+}
+
+.dark .text-gradient {
+  color: #76AFA5;
 }
 
 /* Hide scrollbar for horizontal carousels (keep wheel/touch scrolling) */
