@@ -106,12 +106,12 @@ export default function CircularGauge({
         <svg width={size} height={size} className="absolute inset-0 transform -rotate-90">
           <defs>
             <linearGradient id="gauge-teal" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#17C6B5" />
-              <stop offset="100%" stopColor="#29D391" />
+              <stop offset="0%" stopColor="#60A5FA" />
+              <stop offset="100%" stopColor="#2563EB" />
             </linearGradient>
             <linearGradient id="gauge-mint" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#0E8A6D" />
-              <stop offset="100%" stopColor="#4EE0B8" />
+              <stop offset="0%" stopColor="#1D4ED8" />
+              <stop offset="100%" stopColor="#93C5FD" />
             </linearGradient>
             <linearGradient id="gauge-indigo" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="#6366F1" />

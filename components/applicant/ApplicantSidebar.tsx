@@ -57,7 +57,7 @@ export default function ApplicantSidebar({
       <header className="lg:hidden sticky top-0 z-40 flex items-center justify-between border-b border-border dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 px-4 py-3 backdrop-blur shadow-subtle">
         <Link href="/applicant" className="flex items-center gap-2">
           <div className="flex items-center gap-2">
-            <div className="relative flex items-center justify-center h-8 w-8 rounded-xl bg-gradient-to-br from-teal to-emerald shadow-teal/20 shadow-lg">
+            <div className="relative flex items-center justify-center h-8 w-8 rounded-xl bg-teal shadow-subtle">
               <svg viewBox="0 0 24 24" className="h-4 w-4 text-white" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="12" cy="5" r="3" />
                 <path d="M12 8v8" />
@@ -113,7 +113,7 @@ export default function ApplicantSidebar({
         {/* Brand Header */}
         <div className="flex items-center justify-between px-4 py-4 border-b border-white/10 dark:border-slate-800">
           <Link href="/applicant" className="flex items-center gap-3 overflow-hidden">
-            <div className="relative flex items-center justify-center h-9 w-9 rounded-xl bg-gradient-to-br from-teal to-emerald shadow-teal/20 shadow-lg shrink-0">
+            <div className="relative flex items-center justify-center h-9 w-9 rounded-xl bg-teal shadow-subtle shrink-0">
               <svg viewBox="0 0 24 24" className="h-5 w-5 text-white" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="12" cy="5" r="3" />
                 <path d="M12 8v8" />

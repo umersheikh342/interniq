@@ -17,18 +17,18 @@ const config: Config = {
           light: "#1E293B",
         },
         teal: {
-          DEFAULT: "#0F766E",
-          light: "#F0F7F6",
-          dark: "#115E59",
+          DEFAULT: "#2563EB",
+          light: "#EFF6FF",
+          dark: "#1D4ED8",
         },
         emerald: {
-          DEFAULT: "#3F8F83",
-          light: "#EEF6F4",
-          dark: "#28685F",
+          DEFAULT: "#3B82F6",
+          light: "#EFF6FF",
+          dark: "#1D4ED8",
         },
         mint: {
-          DEFAULT: "#76AFA5",
-          light: "#EDF5F3",
+          DEFAULT: "#93C5FD",
+          light: "#EFF6FF",
         },
         purple: {
           ai: "#6F52ED",
@@ -69,7 +69,7 @@ const config: Config = {
         emerald: "0 1px 3px 0 rgba(15, 23, 42, 0.05)",
       },
       backgroundImage: {
-        "gradient-primary": "linear-gradient(135deg, #0F766E 0%, #0F766E 100%)",
+        "gradient-primary": "linear-gradient(135deg, #2563EB 0%, #2563EB 100%)",
         "gradient-radial-ai": "linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 100%)",
         "gradient-card-glow": "linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 100%)",
       },

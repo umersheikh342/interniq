@@ -109,7 +109,7 @@
   }
 
   .dark .text-teal-dark {
-    color: #2DD4BF;
+    color: #93C5FD;
   }
 
   .dark .text-emerald-dark {
@@ -342,7 +342,7 @@ button:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid #0D9488;
+    outline: 2px solid #2563EB;
   outline-offset: 2px;
   border-radius: 4px;
 }
@@ -350,7 +350,7 @@ textarea:focus-visible {
 /* Focus within for complex elements */
 [role="listbox"]:focus-visible,
 [role="menu"]:focus-visible {
-  outline: 2px solid #14B8A6;
+    outline: 2px solid #60A5FA;
   outline-offset: -2px;
   border-radius: 12px;
 }
@@ -368,11 +368,11 @@ textarea:focus-visible {
 
 /* Minimal brand text: use one muted teal accent instead of a gradient. */
 .text-gradient {
-  color: #0F766E;
+  color: #2563EB;
 }
 
 .dark .text-gradient {
-  color: #76AFA5;
+  color: #93C5FD;
 }
 
 /* Hide scrollbar for horizontal carousels (keep wheel/touch scrolling) */

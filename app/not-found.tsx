@@ -16,11 +16,11 @@ export default function NotFoundPage() {
           className="flex justify-center"
         >
           <svg width="180" height="140" viewBox="0 0 180 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="30" y="40" width="120" height="85" rx="12" fill="#E8FAF8" stroke="#17C6B5" strokeWidth="2"/>
+            <rect x="30" y="40" width="120" height="85" rx="12" fill="#EFF6FF" stroke="#2563EB" strokeWidth="2"/>
             <rect x="45" y="30" width="90" height="20" rx="6" fill="#0B1F3A"/>
             <rect x="60" y="20" width="60" height="15" rx="5" fill="#6F52ED" opacity="0.6"/>
             <text x="90" y="38" textAnchor="middle" fill="white" fontSize="14" fontFamily="monospace" fontWeight="bold">404</text>
-            <path d="M55 70 L90 90 L125 70" stroke="#17C6B5" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M55 70 L90 90 L125 70" stroke="#2563EB" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
             <circle cx="90" cy="72" r="8" fill="#6F52ED" opacity="0.3" stroke="#6F52ED" strokeWidth="2"/>
             <path d="M86 72 L90 76 L98 68" stroke="#6F52ED" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
             {/* Question marks */}

@@ -13,7 +13,7 @@ export default function ProfileCompletion({ profile, skills, projects, experienc
     { name: "Remaining", value: 100 - score }
   ];
   // Brand teal + neutral track that reads well on both light & dark surfaces
-  const COLORS = ["#17C6B5", "#E2E8F0"];
+  const COLORS = ["#2563EB", "#E2E8F0"];
 
   const steps = [
     { label: "Basic Info", done: !!(profile?.full_name && profile?.location) },

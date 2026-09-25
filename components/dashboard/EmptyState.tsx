@@ -14,10 +14,10 @@ interface EmptyStateProps {
 function NoInternshipsIllustration() {
   return (
     <svg width="120" height="100" viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="20" y="30" width="80" height="55" rx="8" fill="#E8FAF8" stroke="#17C6B5" strokeWidth="2"/>
-      <rect x="35" y="20" width="50" height="18" rx="5" fill="#17C6B5" opacity="0.3"/>
-      <rect x="45" y="14" width="30" height="12" rx="4" fill="#17C6B5" opacity="0.5"/>
-      <rect x="30" y="48" width="60" height="6" rx="3" fill="#17C6B5" opacity="0.4"/>
+      <rect x="20" y="30" width="80" height="55" rx="8" fill="#EFF6FF" stroke="#2563EB" strokeWidth="2"/>
+      <rect x="35" y="20" width="50" height="18" rx="5" fill="#2563EB" opacity="0.3"/>
+      <rect x="45" y="14" width="30" height="12" rx="4" fill="#2563EB" opacity="0.5"/>
+      <rect x="30" y="48" width="60" height="6" rx="3" fill="#2563EB" opacity="0.4"/>
       <rect x="30" y="60" width="45" height="5" rx="2.5" fill="#CBD5E1"/>
       <rect x="30" y="71" width="35" height="5" rx="2.5" fill="#CBD5E1"/>
       <circle cx="93" cy="27" r="14" fill="#6F52ED" opacity="0.15"/>
@@ -33,10 +33,10 @@ function NoApplicantsIllustration() {
       <circle cx="60" cy="35" r="18" fill="#F0EEFE" stroke="#6F52ED" strokeWidth="2"/>
       <circle cx="60" cy="28" r="8" fill="#6F52ED" opacity="0.5"/>
       <path d="M40 65 C40 52 80 52 80 65" stroke="#6F52ED" strokeWidth="2.5" strokeLinecap="round" fill="#F0EEFE"/>
-      <rect x="25" y="72" width="70" height="14" rx="7" fill="#E8FAF8"/>
-      <path d="M40 79 L52 79 M58 79 L72 79 M78 79 L83 79" stroke="#17C6B5" strokeWidth="2" strokeLinecap="round"/>
-      <circle cx="95" cy="20" r="8" fill="#E8FAF8" stroke="#17C6B5" strokeWidth="1.5"/>
-      <path d="M95 16 L95 20 M93 18 L97 18" stroke="#17C6B5" strokeWidth="1.5" strokeLinecap="round"/>
+      <rect x="25" y="72" width="70" height="14" rx="7" fill="#EFF6FF"/>
+      <path d="M40 79 L52 79 M58 79 L72 79 M78 79 L83 79" stroke="#2563EB" strokeWidth="2" strokeLinecap="round"/>
+      <circle cx="95" cy="20" r="8" fill="#EFF6FF" stroke="#2563EB" strokeWidth="1.5"/>
+      <path d="M95 16 L95 20 M93 18 L97 18" stroke="#2563EB" strokeWidth="1.5" strokeLinecap="round"/>
     </svg>
   );
 }

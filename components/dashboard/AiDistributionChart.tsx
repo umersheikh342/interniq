@@ -27,8 +27,8 @@ export default function AiDistributionChart({ distribution }: AiDistributionChar
   }
 
   const COLORS = {
-    "Excellent": "#29D391",
-    "Good": "#17C6B5",
+    "Excellent": "#3B82F6",
+    "Good": "#2563EB",
     "Average": "#F59E0B",
     "Weak": "#EF4444",
     "No Data": "#E2E8F0"

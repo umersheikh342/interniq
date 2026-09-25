@@ -80,7 +80,7 @@ export async function GET(req: Request) {
                     height: 36,
                     borderRadius: 10,
                     background:
-                      "linear-gradient(135deg, #17C6B5 0%, #6F52ED 100%)",
+                      "linear-gradient(135deg, #2563EB 0%, #6F52ED 100%)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -118,7 +118,7 @@ export async function GET(req: Request) {
                   border: "1px solid rgba(23, 198, 181, 0.3)",
                   fontSize: 14,
                   fontWeight: 600,
-                  color: "#17C6B5",
+                  color: "#2563EB",
                 }}
               >
                 AI Candidate Review
@@ -167,7 +167,7 @@ export async function GET(req: Request) {
                     width: 6,
                     height: 6,
                     borderRadius: "50%",
-                    background: "#17C6B5",
+                    background: "#2563EB",
                     display: "inline-block",
                   }}
                 />
@@ -198,7 +198,7 @@ export async function GET(req: Request) {
                       height: 64,
                       borderRadius: 16,
                       background:
-                        "linear-gradient(135deg, #17C6B5 0%, #0F9B8E 100%)",
+                        "linear-gradient(135deg, #2563EB 0%, #3B82F6 100%)",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
@@ -220,7 +220,7 @@ export async function GET(req: Request) {
                       style={{
                         fontSize: 14,
                         fontWeight: 600,
-                        color: "#17C6B5",
+                        color: "#2563EB",
                         textTransform: "uppercase",
                         letterSpacing: "1px",
                       }}

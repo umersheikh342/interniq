@@ -53,8 +53,8 @@ export function RadarChartWidget({
           <Radar
             name="Candidate Fit"
             dataKey="score"
-            stroke="#17C6B5"
-            fill="#17C6B5"
+            stroke="#2563EB"
+            fill="#2563EB"
             fillOpacity={hasData ? 0.4 : 0.1}
           />
         </RadarChart>
@@ -113,7 +113,7 @@ export function DistributionPieChart({
     { name: "Gaps", value: 10 },
   ],
 }: PieChartProps) {
-  const COLORS = ["#17C6B5", "#6F52ED", "#29D391", "#EF4444"];
+  const COLORS = ["#2563EB", "#6F52ED", "#3B82F6", "#EF4444"];
 
   return (
     <div className="h-56 w-full flex items-center justify-center">

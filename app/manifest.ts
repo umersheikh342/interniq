@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 /**
  * Web App Manifest — generated at /manifest.webmanifest by Next.js App Router.
- * Brand colors: deep emerald #0E8A6D → teal #17C6B5 → mint #4EE0B8.
+ * Brand color: minimal blue #2563EB.
  */
 export default function manifest(): MetadataRoute.Manifest {
   return {
@@ -15,7 +15,7 @@ export default function manifest(): MetadataRoute.Manifest {
     display: "standalone",
     orientation: "portrait-primary",
     background_color: "#F7F9FC",
-    theme_color: "#0E8A6D",
+    theme_color: "#2563EB",
     categories: ["business", "productivity", "education"],
     lang: "en",
     dir: "ltr",

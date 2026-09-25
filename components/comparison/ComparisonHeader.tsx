@@ -42,7 +42,7 @@ export default function ComparisonHeader({ candidates, analyses }: Props) {
           initial={{ opacity: 0, y: -20, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          className="bg-gradient-to-r from-[#17C6B5] via-[#6F52ED] to-[#17C6B5] rounded-2xl p-[2px] mb-8 shadow-card"
+          className="bg-gradient-to-r from-[#2563EB] via-[#6F52ED] to-[#2563EB] rounded-2xl p-[2px] mb-8 shadow-card"
         >
           <div className="bg-white/95 backdrop-blur rounded-[14px] p-6 md:p-8 dark:bg-[#0F1729]/90 dark:backdrop-blur-xl">
             <div className="flex flex-col md:flex-row items-start md:items-center gap-6">

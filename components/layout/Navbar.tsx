@@ -19,7 +19,7 @@ export default function Navbar() {
         {/* Brand Logo & Tagline */}
         <Link href="/" className="flex items-center gap-3 group">
           <div className="flex items-center gap-2.5 transition-transform group-hover:scale-105">
-            <div className="relative flex items-center justify-center h-9 w-9 rounded-xl bg-gradient-to-br from-teal to-emerald shadow-teal/20 shadow-lg">
+            <div className="relative flex items-center justify-center h-9 w-9 rounded-xl bg-teal shadow-subtle">
               <svg viewBox="0 0 24 24" className="h-5 w-5 text-white" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="12" cy="5" r="3" />
                 <path d="M12 8v8" />
@@ -66,4 +66,3 @@ export default function Navbar() {
     </header>
   );
 }
-

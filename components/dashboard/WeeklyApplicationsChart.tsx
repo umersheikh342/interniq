@@ -36,8 +36,8 @@ export default function WeeklyApplicationsChart({ data }: WeeklyApplicationsChar
           <AreaChart data={chartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
             <defs>
               <linearGradient id="colorCount" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#17C6B5" stopOpacity={0.3} />
-                <stop offset="95%" stopColor="#17C6B5" stopOpacity={0} />
+                <stop offset="5%" stopColor="#2563EB" stopOpacity={0.3} />
+                <stop offset="95%" stopColor="#2563EB" stopOpacity={0} />
               </linearGradient>
             </defs>
             <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#E2E8F0" />
@@ -51,9 +51,9 @@ export default function WeeklyApplicationsChart({ data }: WeeklyApplicationsChar
                 border: "none",
                 fontSize: "12px",
               }}
-              itemStyle={{ color: "#17C6B5" }}
+              itemStyle={{ color: "#2563EB" }}
             />
-            <Area type="monotone" dataKey="count" stroke="#17C6B5" strokeWidth={3} fillOpacity={1} fill="url(#colorCount)" />
+            <Area type="monotone" dataKey="count" stroke="#2563EB" strokeWidth={3} fillOpacity={1} fill="url(#colorCount)" />
           </AreaChart>
         </ResponsiveContainer>
         {!hasData && (

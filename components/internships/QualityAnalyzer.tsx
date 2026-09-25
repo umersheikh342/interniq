@@ -133,7 +133,7 @@ export default function QualityAnalyzer({
                     cy="36"
                     r="32"
                     fill="none"
-                    stroke={health.health_score >= 80 ? "#17C6B5" : health.health_score >= 50 ? "#F59E0B" : "#EF4444"}
+                    stroke={health.health_score >= 80 ? "#2563EB" : health.health_score >= 50 ? "#F59E0B" : "#EF4444"}
                     strokeWidth="4"
                     strokeDasharray={`${(health.health_score / 100) * 201} 201`}
                     strokeLinecap="round"
