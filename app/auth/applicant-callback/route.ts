@@ -27,9 +27,12 @@ export async function GET(request: Request) {
         .maybeSingle();
 
       if (!existing) {
+        // GitHub sends full_name or name; LinkedIn OIDC sends given_name + family_name.
+        const meta = data.user.user_metadata ?? {};
         const name =
-          data.user.user_metadata?.full_name ||
-          data.user.user_metadata?.name ||
+          meta.full_name ||
+          meta.name ||
+          [meta.given_name, meta.family_name].filter(Boolean).join(" ") ||
           "";
         await supabase.from("applicant_profiles").insert({
           id: data.user.id,
@@ -38,6 +41,7 @@ export async function GET(request: Request) {
           role: "applicant",
         });
       }
+
 
       // The on_auth_user_created trigger runs at user creation (before OAuth
       // metadata carries a role hint), so Google applicants may have gotten a

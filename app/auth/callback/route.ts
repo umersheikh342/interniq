@@ -21,12 +21,15 @@ export async function GET(request: Request) {
     const { data, error } = await supabase.auth.exchangeCodeForSession(code);
 
     if (!error && data.user) {
+      // GitHub sends full_name or name; LinkedIn OIDC sends given_name + family_name.
+      const meta = data.user.user_metadata ?? {};
       const name =
-        data.user.user_metadata?.full_name ||
-        data.user.user_metadata?.name ||
+        meta.full_name ||
+        meta.name ||
+        [meta.given_name, meta.family_name].filter(Boolean).join(" ") ||
         "";
       const orgName =
-        (data.user.user_metadata?.organization_name as string) ||
+        (meta.organization_name as string) ||
         "Unnamed Organization";
 
       // Idempotent: returns the existing org id when the profile is already
@@ -47,6 +50,7 @@ export async function GET(request: Request) {
         );
       }
     }
+
   }
 
   return NextResponse.redirect(`${origin}${next}`);
