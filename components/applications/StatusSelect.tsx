@@ -10,6 +10,7 @@ const STATUSES: { value: ApplicationStatus; label: string; tone: string }[] = [
   { value: "new", label: "New", tone: "neutral" },
   { value: "under_review", label: "Under Review", tone: "amber" },
   { value: "shortlisted", label: "Shortlisted", tone: "teal" },
+  { value: "interview", label: "Interview", tone: "fuchsia" },
   { value: "rejected", label: "Rejected", tone: "rose" },
   { value: "archived", label: "Archived", tone: "slate" },
 ];
@@ -18,9 +19,11 @@ const toneClasses: Record<string, string> = {
   neutral: "border-border bg-slate-50 text-text-secondary",
   amber: "border-amber-300 bg-amber-50 text-warning font-bold",
   teal: "border-teal/40 bg-teal-light text-teal-dark font-bold",
+  fuchsia: "border-fuchsia-300 bg-fuchsia-50 text-fuchsia-700 font-bold",
   rose: "border-red-300 bg-red-50 text-danger font-bold",
   slate: "border-slate-300 bg-slate-100 text-text-secondary font-bold",
 };
+
 
 export default function StatusSelect({
   applicationId,
@@ -148,6 +151,8 @@ export default function StatusSelect({
                     ? "bg-danger"
                     : s.tone === "teal"
                     ? "bg-teal"
+                    : s.tone === "fuchsia"
+                    ? "bg-fuchsia-600"
                     : s.tone === "amber"
                     ? "bg-warning"
                     : "bg-primary"
@@ -157,6 +162,7 @@ export default function StatusSelect({
           </div>
         ))}
       </div>
+
 
       {error && <p className="text-xs text-danger font-medium">{error}</p>}
     </div>

@@ -136,10 +136,17 @@ export default function InterviewScheduler({
     if (error) {
       toast.error(`Failed to schedule: ${error}`);
     } else {
+      // Sync application status to 'interview' so applicant timeline and Interview Prep unlock automatically
+      await supabase
+        .from("applications")
+        .update({ status: "interview" })
+        .eq("id", applicationId);
+
       toast.success("Interview scheduled successfully");
       onScheduled();
       onClose();
     }
+
   }
 
   return (

@@ -6,6 +6,7 @@ export type ApplicationStatus =
   | "new"
   | "under_review"
   | "shortlisted"
+  | "interview"
   | "rejected"
   | "archived"
   | "pending";

@@ -6,7 +6,7 @@ import { toast } from "sonner";
 import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { RefreshCw, ExternalLink } from "lucide-react";
+import { RefreshCw, ExternalLink, CalendarCheck } from "lucide-react";
 import ApplicationTimeline from "./ApplicationTimeline";
 import { cn, formatDateShort } from "@/lib/utils";
 
@@ -262,12 +262,20 @@ export default function ApplicationCard({ app }: { app: any }) {
 
           </div>
         </div>
-        <div className="flex gap-2">
+        <div className="flex gap-2 flex-wrap">
+          {status === "interview" && (
+            <Link href="/applicant/interview-prep">
+              <Button variant="gradient" size="sm" className="gap-1.5 shadow-sm">
+                <CalendarCheck className="w-3.5 h-3.5" /> Prep for Interview
+              </Button>
+            </Link>
+          )}
           <Link href={jobUrl}>
             <Button variant="outline" size="sm" className="gap-1.5">
               <ExternalLink className="w-3.5 h-3.5" /> View Job
             </Button>
           </Link>
+
           {status === "rejected" && (
             <Button variant="gradient" size="sm" onClick={handleReapply} disabled={reapplying} className="gap-1.5">
               <RefreshCw className="w-3.5 h-3.5" /> {reapplying ? "Re-applying..." : "Reapply"}
