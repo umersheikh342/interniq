@@ -14,6 +14,7 @@ import {
   Menu,
   X,
   ChevronRight,
+  CalendarCheck,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -25,10 +26,12 @@ const navItems = [
   { href: "/applicant/profile", label: "My Profile", icon: UserCircle },
   { href: "/applicant/internships", label: "Find Internships", icon: Search },
   { href: "/applicant/applications", label: "My Applications", icon: Briefcase },
+  { href: "/applicant/interview-prep", label: "Interview Prep", icon: CalendarCheck },
   { href: "/applicant/saved", label: "Saved Jobs", icon: Bookmark },
   { href: "/applicant/resume", label: "Resume", icon: FileText },
   { href: "/applicant/settings", label: "Settings", icon: Settings },
 ];
+
 
 export default function ApplicantSidebar({
   userEmail,
